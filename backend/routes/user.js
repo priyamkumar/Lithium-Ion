@@ -1,7 +1,6 @@
 import express from "express";
 import User from "../models/user.js";
 import asyncHandler from "express-async-handler";
-import generateToken from "../utils/generateToken.js";
 
 const router = express.Router();
 
@@ -25,7 +24,6 @@ router.post(
         name: user.name,
         email: user.email,
         createdAt: user.createdAt,
-        token: generateToken(user._id),
       });
     } else {
       res.status(400);

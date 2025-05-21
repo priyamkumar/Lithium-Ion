@@ -6,9 +6,9 @@ import { errorHandler, notFound } from "./middleware/error.js";
 import userRoutes from "./routes/user.js";
 import contactRoutes from "./routes/contact.js";
 import helmet from "helmet";
-// import mongoSanitize from "express-mongo-sanitize";
 import rateLimit from "express-rate-limit";
-// import xss from "xss-clean";
+import xss from "xss-clean";
+import { mongoSanitize } from "./middleware/sanitize.js";
 
 dotenv.config();
 const app = express();
@@ -25,8 +25,8 @@ app.use(
     },
   })
 );
-// app.use(xss());
-// app.use(mongoSanitize());
+app.use(xss());
+app.use(mongoSanitize);
 app.use(rateLimit({ windowMs: 15 * 60 * 1000, max: 100 }));
 app.use(
   cors({
