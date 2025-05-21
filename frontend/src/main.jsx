@@ -12,7 +12,7 @@ import Admin from "./Admin.jsx";
 import AdminProvider from "../context/AdminProvider.jsx";
 import Error from "./Error.jsx"
 
-export const server = "http://localhost:5001";
+export const server = "https://lithium-g17h24cdj-priyam-kumars-projects-a0cdd7a5.vercel.app";
 
 const router = createBrowserRouter([
   {
