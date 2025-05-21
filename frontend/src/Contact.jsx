@@ -38,6 +38,19 @@ export default function ContactPage() {
       newErrors.email = "Please enter a valid email address";
     }
 
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Phone number is required";
+    } else {
+      const phoneClean = formData.phone.replace(/\s+/g, "");
+
+      const phoneRegex = /^(\+91[-]?)?[0-9]{10}$/;
+
+      if (!phoneRegex.test(phoneClean)) {
+        newErrors.phone =
+          "Please enter a valid 10-digit Indian phone number (with optional +91 prefix)";
+      }
+    }
+
     if (!formData.message.trim()) {
       newErrors.message = "Message is required";
     }
@@ -52,7 +65,6 @@ export default function ContactPage() {
       [name]: value,
     });
 
-    // Clear error when user starts typing
     if (errors[name]) {
       setErrors({
         ...errors,
@@ -66,7 +78,6 @@ export default function ContactPage() {
     const newErrors = validateForm();
 
     if (Object.keys(newErrors).length === 0) {
-      // Form is valid, handle submission
       try {
         const { data } = await axios.post(`${server}/api/contact/`, {
           name: formData.name,
@@ -81,7 +92,6 @@ export default function ContactPage() {
         console.log(err);
       }
 
-      // Reset form after submission
       setFormData({
         name: "",
         email: "",
@@ -346,9 +356,18 @@ export default function ContactPage() {
                           id="phone"
                           value={formData.phone}
                           onChange={handleChange}
-                          className="block w-full px-4 py-3 rounded-lg border border-gray-300 shadow-sm focus:ring-green-500 focus:border-green-500"
+                          className={`block w-full px-4 py-3 rounded-lg border ${
+                            errors.phone
+                              ? "border-red-300 ring-1 ring-red-500"
+                              : "border-gray-300"
+                          } shadow-sm focus:ring-green-500 focus:border-green-500`}
                           placeholder="+91-XXXXXXXXXX"
                         />
+                        {errors.phone && (
+                          <p className="mt-1 text-sm text-red-600">
+                            {errors.phone}
+                          </p>
+                        )}
                       </div>
                     </div>
 

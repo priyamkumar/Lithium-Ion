@@ -4,7 +4,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import { errorHandler, notFound } from "./middleware/error.js";
 import userRoutes from "./routes/user.js";
-import contactRoutes from './routes/contact.js';
+import contactRoutes from "./routes/contact.js";
 
 dotenv.config();
 const app = express();
@@ -31,7 +31,7 @@ mongoose
   .catch((error) => console.error("MongoDB connection failed:", error));
 
 app.use("/api/user", userRoutes);
-app.use('/api/contact', contactRoutes);
+app.use("/api/contact", contactRoutes);
 
 app.use(notFound);
 app.use(errorHandler);

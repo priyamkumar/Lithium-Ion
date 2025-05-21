@@ -65,7 +65,7 @@ router.put("/read", async (req, res) => {
     res.json({
       success: true,
       message,
-      messages
+      messages,
     });
   } catch (error) {
     res.status(400);

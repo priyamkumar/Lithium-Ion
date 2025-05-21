@@ -88,7 +88,7 @@ export default function AdminDashboard() {
   };
 
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-[91vh]">
       {/* Main Content */}
       <div className="flex-1">
         {/* Top Navbar */}
@@ -120,7 +120,7 @@ export default function AdminDashboard() {
         </div>
 
         {/* Main Content Area */}
-        <div className="p-6 bg-gray-50 min-h-full">
+        <div className="p-6 bg-gray-50 min-h-[91vh]">
           {/* Search and Filters */}
           <div className="mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-4 sm:space-y-0">
             <div className="relative w-full sm:w-96">
@@ -175,7 +175,7 @@ export default function AdminDashboard() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {/* Message List with Scrollbar */}
             <div className="col-span-1 lg:col-span-1">
-              <div className="h-96 overflow-y-auto pr-2">
+              <div className="max-h-96 overflow-y-auto pr-2">
                 {loading ? (
                   // Loading state
                   <div className="space-y-4">
