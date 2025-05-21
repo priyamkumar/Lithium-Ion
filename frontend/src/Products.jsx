@@ -7,7 +7,7 @@ import {
   Server,
   Factory,
   Car,
-  Search
+  Search,
 } from "lucide-react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 
@@ -169,7 +169,9 @@ const NoResults = () => (
     <div className="flex flex-col items-center gap-2">
       <Package className="h-12 w-12 text-gray-400" />
       <h3 className="text-xl font-medium text-gray-800">No products found</h3>
-      <p className="text-gray-600">Try adjusting your search or filter criteria</p>
+      <p className="text-gray-600">
+        Try adjusting your search or filter criteria
+      </p>
     </div>
   </div>
 );
@@ -178,65 +180,69 @@ const NoResults = () => (
 export default function Products() {
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
-  
+
   // Initialize state from URL parameters
-  const [filter, setFilter] = useState(searchParams.get("application") || "All");
-  const [searchTerm, setSearchTerm] = useState(searchParams.get("search") || "");
-  
+  const [filter, setFilter] = useState(
+    searchParams.get("application") || "All"
+  );
+  const [searchTerm, setSearchTerm] = useState(
+    searchParams.get("search") || ""
+  );
+
   // Listen for header search events
   useEffect(() => {
     const handleHeaderSearch = (event) => {
       setSearchTerm(event.detail.searchTerm);
     };
-    
+
     // Add event listener
     window.addEventListener("header-search", handleHeaderSearch);
-    
+
     // Clean up
     return () => {
       window.removeEventListener("header-search", handleHeaderSearch);
     };
   }, []);
-  
+
   // Update URL when filter or search term changes
   useEffect(() => {
     const params = new URLSearchParams(searchParams);
-    
+
     if (filter === "All") {
       params.delete("application");
     } else {
       params.set("application", filter);
     }
-    
+
     if (!searchTerm) {
       params.delete("search");
     } else {
       params.set("search", searchTerm);
     }
-    
+
     setSearchParams(params, { replace: true });
   }, [filter, searchTerm, setSearchParams, searchParams]);
-  
+
   // Filter products based on application and search term
-  const filteredProducts = productData.filter(product => {
+  const filteredProducts = productData.filter((product) => {
     // First filter by application if a specific one is selected
     if (filter !== "All" && !product.applications.includes(filter)) {
       return false;
     }
-    
+
     // Then filter by search term
     if (searchTerm.trim() !== "") {
       return product.name.toLowerCase().includes(searchTerm.toLowerCase());
     }
-    
+
     return true;
   });
-  
+
   // Handle search input change
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
   };
-  
+
   // Clear search term
   const clearSearch = () => {
     setSearchTerm("");
@@ -264,7 +270,7 @@ export default function Products() {
           <h2 className="text-2xl font-bold text-gray-900 mb-6">
             Our Products
           </h2>
-          
+
           {/* Search Bar */}
           <div className="mb-6 relative">
             <div className="relative">
@@ -288,7 +294,7 @@ export default function Products() {
               )}
             </div>
           </div>
-          
+
           {/* Application Filter Buttons */}
           <div className="flex flex-wrap gap-2 mb-6">
             <button
@@ -360,10 +366,7 @@ export default function Products() {
               </p>
               <button
                 className="cursor-pointer mt-6 bg-yellow-500 hover:bg-yellow-600 text-white font-medium py-2 px-6 rounded-lg transition-colors duration-300 flex items-center gap-2"
-                onClick={() => {
-                  window.scrollTo(0, 0);
-                  navigate("/process");
-                }}
+                onClick={() => navigate("/process")}
               >
                 <Leaf className="h-5 w-5" />
                 Learn About Our Process
@@ -406,10 +409,7 @@ export default function Products() {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button
               className="cursor-pointer bg-yellow-500 hover:bg-yellow-600 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-300"
-              onClick={() => {
-                window.scrollTo(0, 0);
-                navigate("/contact");
-              }}
+              onClick={() => navigate("/contact")}
             >
               Contact Our Team
             </button>

@@ -72,7 +72,7 @@ export default function Login() {
       display="flex"
       alignItems="center"
       justifyContent="center"
-      height="100vh"
+      height="91vh"
     >
       <Loader />{" "}
     </Box>

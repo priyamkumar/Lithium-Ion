@@ -81,20 +81,14 @@ export default function AboutUsSection() {
               <div className="flex flex-wrap gap-4 pt-2">
                 <button
                   className="cursor-pointer bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium flex items-center transition-colors duration-300"
-                  onClick={() => {
-                    window.scrollTo(0, 0);
-                    navigate("/process");
-                  }}
+                  onClick={() => navigate("/process")}
                 >
                   Our Process
                   <ChevronRight size={18} className="ml-1" />
                 </button>
                 <button
                   className="cursor-pointer border border-gray-300 hover:border-green-600 hover:text-green-700 px-6 py-3 rounded-lg font-medium flex items-center transition-colors duration-300"
-                  onClick={() => {
-                    window.scrollTo(0, 0);
-                    navigate("/contact");
-                  }}
+                  onClick={() => navigate("/contact")}
                 >
                   Contact Us
                 </button>

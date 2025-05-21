@@ -36,12 +36,8 @@ const HeroGradientBackground = memo(() => (
 
 const HeroContent = memo(() => {
   const navigate = useNavigate();
-  
-  const handleExploreClick = () => {
-    window.scrollTo(0, 0);
-    navigate("/process");
-  };
-  
+
+  const handleExploreClick = () => navigate("/process");
   return (
     <motion.div
       initial={{ opacity: 0, x: -50 }}

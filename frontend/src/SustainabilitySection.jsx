@@ -49,10 +49,7 @@ const SustainabilitySection = () => {
             whileHover={{ scale: shouldReduceMotion ? 1 : 1.05 }}
             whileTap={{ scale: shouldReduceMotion ? 1 : 0.98 }}
             className="cursor-pointer bg-yellow-400 text-green-900 px-8 py-4 font-bold rounded-full hover:bg-yellow-300 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
-            onClick={() => {
-              window.scrollTo(0, 0);
-              navigate("/about");
-            }}
+            onClick={() => navigate("/about")}
           >
             Explore Our Initiatives
           </motion.button>
