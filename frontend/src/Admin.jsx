@@ -120,7 +120,7 @@ export default function AdminDashboard() {
         </div>
 
         {/* Main Content Area */}
-        <div className="p-6 bg-gray-50">
+        <div className="p-6 bg-gray-50 min-h-full">
           {/* Search and Filters */}
           <div className="mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-4 sm:space-y-0">
             <div className="relative w-full sm:w-96">
