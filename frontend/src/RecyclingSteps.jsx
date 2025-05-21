@@ -1,20 +1,8 @@
-import React from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 
-/**
- * RecyclingProcess – with Framer Motion
- * ------------------------------------------------------
- * Animated fade‑in + lift for each card, run once when the
- * section scrolls into view. Uses the user’s OS reduced‑motion
- * preference to skip heavy animation when requested.
- */
+
 const RecyclingProcess = () => {
   const shouldReduceMotion = useReducedMotion();
-
-  /*
-   * Variants are functions so we can pass a "custom" prop
-   * (index) to stagger the children cheaply without an extra loop.
-   */
   const cardVariants = {
     hidden: {
       opacity: 0,

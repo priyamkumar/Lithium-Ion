@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Battery, Truck, Wrench, Cog, Droplets, Recycle } from 'lucide-react';
 
 export default function Process() {

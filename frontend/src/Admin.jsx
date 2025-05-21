@@ -88,7 +88,7 @@ export default function AdminDashboard() {
   };
 
   return (
-    <div className="flex h-screen">
+    <div className="flex min-h-screen">
       {/* Main Content */}
       <div className="flex-1">
         {/* Top Navbar */}

@@ -1,4 +1,4 @@
-import { memo, useMemo } from "react";
+import { memo } from "react";
 import { Button, Typography } from "@mui/material";
 import { ArrowForward, Recycling } from "@mui/icons-material";
 import { motion } from "framer-motion";

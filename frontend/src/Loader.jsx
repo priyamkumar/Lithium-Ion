@@ -1,6 +1,4 @@
-import CircularProgress, {
-  circularProgressClasses,
-} from "@mui/material/CircularProgress";
+import CircularProgress from "@mui/material/CircularProgress";
 
 export default function GradientCircularProgress() {
   return (
