@@ -7,8 +7,8 @@ import userRoutes from "./routes/user.js";
 import contactRoutes from "./routes/contact.js";
 import helmet from "helmet";
 import rateLimit from "express-rate-limit";
-// import xss from "xss-clean";
 import { mongoSanitize } from "./middleware/sanitize.js";
+import { xssSanitize } from './middleware/xssSanitize.js';
 
 dotenv.config();
 const app = express();
@@ -25,7 +25,7 @@ app.use(
     },
   })
 );
-// app.use(xss());
+app.use(xssSanitize);
 app.use(mongoSanitize);
 app.use(rateLimit({ windowMs: 15 * 60 * 1000, max: 100 }));
 app.use(
