@@ -455,7 +455,7 @@ export default function AboutUsSection() {
       </section>
 
       {/* Meet the Founders */}
-      <section
+      {/* <section
         ref={(el) => (sectionRefs.current[2] = el)}
         className="py-16 md:py-24 px-6 md:px-12 bg-gray-50 opacity-0 transition-opacity duration-1000"
       >
@@ -470,9 +470,9 @@ export default function AboutUsSection() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8"> */}
             {/* Founder 1 */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+            {/* <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
               <div className="relative h-128 overflow-hidden">
                 <img
                   src={founderImages[0]}
@@ -508,10 +508,10 @@ export default function AboutUsSection() {
                   </span>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* Founder 2 */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+            {/* <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
               <div className="relative h-128 overflow-hidden">
                 <img
                   src={founderImages[1]}
@@ -552,7 +552,7 @@ export default function AboutUsSection() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

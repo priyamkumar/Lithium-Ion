@@ -18,8 +18,8 @@ const Footer = () => {
               life through creativity and technical excellence.
             </p>
             <div className="text-sm">
-              <p>Email: info@grenera.com</p>
-              <p>Phone: 98XXXXXXXX</p>
+              <p>Email: grenera.spl@gmail.com</p>
+              <p>Phone: 9817397058</p>
             </div>
           </div>
 

@@ -104,10 +104,10 @@ export default function ContactPage() {
   };
 
   const contactInfo = {
-    email: "contact@example.com",
-    phone: "+91-XXXXXXXXXX",
+    email: "grenera.spl@gmail.com",
+    phone: "+91-9817397058",
     address:
-      "X, Khandsa Rd, Raj Nagar, New Anaj Mandi, Hari Nagar, Sector 10A, Gurugram, Haryana 122001",
+      "47PR+XJ3 Model Town, Yamuna Nagar, Haryana",
   };
 
   return (
@@ -128,7 +128,7 @@ export default function ContactPage() {
           <div className="shadow-lg rounded-2xl overflow-hidden">
             <iframe
               title="Office Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1754.035741086684!2d77.01341945663513!3d28.447261493916372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1912faadfc55%3A0x4db3f418053f7502!2sShivaji%20park%20colony%2C%20Gurgaon!5e0!3m2!1sen!2sin!4v1747467485866!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3450.490868845454!2d77.29154299999999!3d30.137379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzDCsDA4JzE0LjYiTiA3N8KwMTcnMjkuNiJF!5e0!3m2!1sen!2sin!4v1749025292654!5m2!1sen!2sin"
               className="w-full h-64 md:h-96"
               allowFullScreen
               loading="lazy"
@@ -234,15 +234,9 @@ export default function ContactPage() {
                 </h3>
                 <div className="space-y-2">
                   <div className="flex justify-between">
-                    <p className="text-gray-600">Monday - Friday</p>
+                    <p className="text-gray-600">Monday - Saturday</p>
                     <p className="text-gray-900 font-medium">
-                      9:00 AM - 6:00 PM
-                    </p>
-                  </div>
-                  <div className="flex justify-between">
-                    <p className="text-gray-600">Saturday</p>
-                    <p className="text-gray-900 font-medium">
-                      10:00 AM - 4:00 PM
+                      9:00 AM - 5:00 PM (IST)
                     </p>
                   </div>
                   <div className="flex justify-between">
@@ -466,22 +460,22 @@ export default function ContactPage() {
 // FAQ data
 const faqs = [
   {
-    question: "How quickly do you respond to inquiries?",
+    question: "What types of batteries do you accept?",
     answer:
       "We aim to respond to all inquiries within 24 hours during business days. For urgent matters, please call  support line directly.",
   },
   {
-    question: "Do you offer virtual meetings?",
+    question: "How does the pickup process work?",
     answer:
       "Yes, we offer video conferencing through Zoom, Microsoft Teams, or Google Meet. Please indicate your preference when scheduling a meeting.",
   },
   {
-    question: "What are your customer support hours?",
+    question: "What certifications do you have?",
     answer:
       "Our customer support team is available Monday through Friday from 9:00 AM to 6:00 PM IST, and Saturdays from 10:00 AM to 4:00 PM IST.",
   },
   {
-    question: "How can I request a product demo?",
+    question: "How do you ensure data security for device batteries?",
     answer:
       "You can request a product demo by selecting 'Sales' in the contact form above, or by emailing demo@example.com with your requirements.",
   },
