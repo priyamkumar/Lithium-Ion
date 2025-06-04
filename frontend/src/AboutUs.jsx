@@ -58,8 +58,7 @@ export default function AboutUsSection() {
                 Sustainable Battery Recycling
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
-                Powering the Future{" "}
-                <span className="text-green-600">Sustainably</span>
+                Closing the <span className="text-green-600">Loop</span>
               </h1>
               <p className="text-xl text-gray-600 font-light">
                 We specialize in the eco-friendly recycling of lithium-ion
@@ -67,10 +66,11 @@ export default function AboutUsSection() {
               </p>
               <div className="bg-white/80 backdrop-blur p-6 rounded-2xl shadow-md">
                 <p className="text-gray-700 mb-4">
-                  At XYZ, our mission is to reduce e-waste, recover valuable
-                  materials, and promote sustainable energy solutions for future
-                  generations. We're driven by three core values: innovation,
-                  responsibility, and measurable environmental impact.
+                  At Grenera Solutions, We recover up to 95% of valuable
+                  materials from lithium-ion batteries -turning environmental
+                  liability into sustainable profit. From EVs to smartphones, we
+                  handle it all with certified processes and transparent
+                  reporting.
                 </p>
                 <p className="text-gray-700 font-medium">
                   Our vision is simple yet ambitious: a world where battery
@@ -83,7 +83,7 @@ export default function AboutUsSection() {
                   className="cursor-pointer bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium flex items-center transition-colors duration-300"
                   onClick={() => navigate("/process")}
                 >
-                  Our Process
+                  See Our Process
                   <ChevronRight size={18} className="ml-1" />
                 </button>
                 <button
@@ -140,13 +140,13 @@ export default function AboutUsSection() {
               </div>
               <h3 className="font-bold text-lg mb-2">Toxic Waste Prevention</h3>
               <p className="text-gray-700 flex-grow">
-                Improper disposal of batteries pollutes soil and water with
-                harmful chemicals and heavy metals.
+                Discarding batteries improperly contaminates soil and water with
+                harmful toxins and heavy metals.
               </p>
               <div className="mt-4 pt-4 border-t border-gray-200">
                 <p className="text-red-600 font-medium text-sm">
-                  Lithium-ion batteries in landfills can cause fires and release
-                  toxins
+                  Lithium-ion batteries in landfills can ignite and release
+                  hazardous chemicals.
                 </p>
               </div>
             </div>
@@ -160,13 +160,13 @@ export default function AboutUsSection() {
                 Environmental Protection
               </h3>
               <p className="text-gray-700 flex-grow">
-                Recycling reduces the need for mining rare-earth materials,
-                protecting ecosystems and reducing carbon emissions.
+                Recycling reduces the need for mining rare earth elements
+                helping preserve land, ecosystem and air quality
               </p>
               <div className="mt-4 pt-4 border-t border-gray-200">
                 <p className="text-blue-600 font-medium text-sm">
-                  Mining for battery materials disrupts 50+ acres of land per
-                  site
+                  Battery material mining can damage over 50 acres of land per
+                  site.
                 </p>
               </div>
             </div>
@@ -178,12 +178,12 @@ export default function AboutUsSection() {
               </div>
               <h3 className="font-bold text-lg mb-2">Resource Recovery</h3>
               <p className="text-gray-700 flex-grow">
-                Our advanced processes recover valuable materials like lithium,
-                cobalt, and nickel for reuse in new products.
+                We recover valuable elements like lithium, cobalt, and nickel
+                for reuse in new tech products.
               </p>
               <div className="mt-4 pt-4 border-t border-gray-200">
                 <p className="text-yellow-600 font-medium text-sm">
-                  Up to 80% of battery materials can be recovered
+                  Up to 80% of a battery's materials can be reclaimed
                 </p>
               </div>
             </div>
@@ -195,12 +195,13 @@ export default function AboutUsSection() {
               </div>
               <h3 className="font-bold text-lg mb-2">Circular Economy</h3>
               <p className="text-gray-700 flex-grow">
-                We enable closed-loop battery production and reuse, reducing
-                waste and creating sustainable material cycles.
+                We promote closed-loop battery reuse systems, minimizing waste
+                and maximizing sustainability.
               </p>
               <div className="mt-4 pt-4 border-t border-gray-200">
                 <p className="text-green-600 font-medium text-sm">
-                  Only 5% of lithium-ion batteries are currently recycled
+                  Only 5% of lithium-ion batteries are currently recycled - help
+                  us improve this!
                 </p>
               </div>
             </div>
@@ -217,7 +218,7 @@ export default function AboutUsSection() {
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/2">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                Built for the Circular Economy
+                Powering a Circular Economy
               </h2>
 
               <blockquote className="bg-green-50 border-l-4 border-green-500 pl-6 py-4 pr-4 my-6 italic text-lg text-gray-700">
@@ -225,18 +226,18 @@ export default function AboutUsSection() {
               </blockquote>
 
               <p className="text-gray-700 mb-4">
-                We're committed to reducing reliance on mining by reintegrating
-                recovered materials into the supply chain. Our advanced
-                recycling process extracts up to 95% of valuable materials from
-                lithium-ion batteries and transforms them into battery-grade
-                inputs for manufacturers.
+                We’re transforming how batteries are used and reused. By
+                extracting up to 95% of valuable materials from lithium-ion
+                batteries, our advanced recycling process reintegrates them into
+                the supply chain — reducing the need for mining and lowering
+                environmental impact.
               </p>
 
               <p className="text-gray-700 mb-6">
-                Through strategic partnerships with leading battery
-                manufacturers, we ensure that recovered materials meet the
-                highest quality standards and can be seamlessly integrated into
-                new production cycles.
+                Through strong industry partnerships, we ensure these recovered
+                materials meet high quality standards and are ready to be used
+                in new batteries and products — keeping the loop closed and
+                sustainable.
               </p>
 
               <div className="flex items-center gap-4 mb-6">
@@ -246,7 +247,8 @@ export default function AboutUsSection() {
                     Certified Circular
                   </h4>
                   <p className="text-sm text-gray-600">
-                    Independent verification of our closed-loop processes
+                    Third-party verified closed-loop systems ensure traceability
+                    and accountability.{" "}
                   </p>
                 </div>
               </div>
@@ -255,10 +257,11 @@ export default function AboutUsSection() {
                 <Users className="text-green-600" size={24} />
                 <div>
                   <h4 className="font-bold text-gray-800">
-                    Industry Partnerships
+                    Collaborating with Industry Leaders
                   </h4>
                   <p className="text-sm text-gray-600">
-                    Working with 12+ manufacturers to close the loop
+                    Working with 50+ manufacturers to build a more sustainable
+                    battery lifecycle.
                   </p>
                 </div>
               </div>

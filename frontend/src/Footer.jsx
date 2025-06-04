@@ -9,13 +9,16 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-white text-xl font-bold">XYZ</h3>
-            <p className="text-sm">
+<img
+              src="/logoNoSpaceDark.png"
+              alt="Grenera Solutions Logo"
+              className="h-35 w-auto object-contain"
+            />            <p className="text-sm">
               Innovating the future, today. We bring technology solutions to
               life through creativity and technical excellence.
             </p>
             <div className="text-sm">
-              <p>Email: info@xyz.com</p>
+              <p>Email: info@grenera.com</p>
               <p>Phone: 98XXXXXXXX</p>
             </div>
           </div>
@@ -104,7 +107,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
-          <p>&copy; {new Date().getFullYear()} XYZ All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} <Link to="/" className="text-gray-400 hover:text-white">Grenera Solutions</Link> All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -30,7 +30,7 @@ const SustainabilitySection = () => {
             Our Commitment to Sustainability
           </h2>
           <p className="text-lg mb-8 text-green-100 leading-relaxed">
-            XYZ Pvt. Ltd. is committed to international initiatives related to
+            Grenera Solutions is committed to international initiatives related to
             Climate Goals, Energy and Circular Economy including:
           </p>
           <ul className="space-y-4 mb-10">

@@ -86,7 +86,6 @@ export default function ContactPage() {
           contactPurpose: formData.purpose,
           message: formData.message,
         });
-        console.log(data);
         setIsSubmitted(true);
       } catch (err) {
         console.log(err);

@@ -27,7 +27,11 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <span className="text-3xl font-bold text-secondary-900">LOGO</span>
+            <img
+              src="/logoNoSpace.png"
+              alt="Grenera Solutions Logo"
+              className="h-16 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -38,9 +42,7 @@ const Header = () => {
                 to={item.path}
                 className={({ isActive }) =>
                   `text-lg font-medium transition-colors duration-200 hover:text-green-700 ${
-                    isActive
-                      ? "text-green-700"
-                      : ""
+                    isActive ? "text-green-700" : ""
                   }`
                 }
               >
@@ -50,7 +52,7 @@ const Header = () => {
           </nav>
 
           <div className="flex gap-6">
-            <AnimatedSearchBar/>
+            <AnimatedSearchBar />
             <button
               className="lg:hidden text-secondary-900 focus:outline-none cursor-pointer"
               onClick={toggleMobileMenu}
@@ -83,9 +85,7 @@ const Header = () => {
                   to={item.path}
                   className={({ isActive }) =>
                     `text-base font-medium py-2 px-3 rounded-md transition-colors duration-200 ${
-                      isActive
-                        ? "text-green-700"
-                        : "hover:bg-gray-100"
+                      isActive ? "text-green-700" : "hover:bg-gray-100"
                     }`
                   }
                   onClick={() => setMobileMenuOpen(false)}
