@@ -12,6 +12,7 @@ import {
 import { FaXTwitter } from "react-icons/fa6";
 import { server } from "./main";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -106,8 +107,7 @@ export default function ContactPage() {
   const contactInfo = {
     email: "grenera.spl@gmail.com",
     phone: "+91-9817397058",
-    address:
-      "47PR+XJ3 Model Town, Yamuna Nagar, Haryana",
+    address: "47PR+XJ3 Model Town, Yamuna Nagar, Haryana",
   };
 
   return (
@@ -151,12 +151,12 @@ export default function ContactPage() {
                   </div>
                   <div className="ml-4">
                     <p className="text-sm font-medium text-gray-500">Email</p>
-                    <a
-                      href={`mailto:${contactInfo.email}`}
+                    <Link
+                      to={`mailto:${contactInfo.email}`}
                       className="text-base text-gray-900 hover:text-green-600 transition-colors"
                     >
                       {contactInfo.email}
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
@@ -166,12 +166,12 @@ export default function ContactPage() {
                   </div>
                   <div className="ml-4">
                     <p className="text-sm font-medium text-gray-500">Phone</p>
-                    <a
-                      href={`tel:${contactInfo.phone}`}
+                    <Link
+                      to={`tel:${contactInfo.phone}`}
                       className="text-base text-gray-900 hover:text-green-600 transition-colors"
                     >
                       {contactInfo.phone}
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
@@ -460,23 +460,41 @@ export default function ContactPage() {
 // FAQ data
 const faqs = [
   {
-    question: "What types of batteries do you accept?",
-    answer:
-      "We aim to respond to all inquiries within 24 hours during business days. For urgent matters, please call  support line directly.",
+    question:
+      "Can I schedule a pickup for a large quantity of lithium-ion batteries to be recycled?",
+    answer: (
+      <>
+        Yes, we offer pickup services for large quantities of lithium-ion batteries, making the recycling process convenient for businesses, organizations, and individuals with significant volumes of batteries to recycle. Contact our customer service to schedule a pickup.
+      </>
+    ),
   },
   {
-    question: "How does the pickup process work?",
-    answer:
-      "Yes, we offer video conferencing through Zoom, Microsoft Teams, or Google Meet. Please indicate your preference when scheduling a meeting.",
+    question:
+      "How are the recycled materials from the lithium-ion batteries used?",
+    answer: (
+      <>
+        The materials recovered from recycled lithium-ion batteries, such as lithium, cobalt, and nickel, are sold and can be used to manufacture new batteries and other products, supporting a more sustainable supply chain for battery production by other companies.
+      </>
+    ),
   },
   {
-    question: "What certifications do you have?",
-    answer:
-      "Our customer support team is available Monday through Friday from 9:00 AM to 6:00 PM IST, and Saturdays from 10:00 AM to 4:00 PM IST.",
+    question: "Will Grenera Solutions pay for batteries?",
+    answer: (
+      <>
+        Yes, we will pay for the mobile and laptop batteries. For more inquiries, please contact{" "}
+        <Link to="mailto:grenera.spl@gmail.com" className="text-base text-gray-900 hover:text-green-600 transition-colors">
+          grenera.spl@gmail.com
+        </Link>.
+      </>
+    ),
   },
   {
-    question: "How do you ensure data security for device batteries?",
-    answer:
-      "You can request a product demo by selecting 'Sales' in the contact form above, or by emailing demo@example.com with your requirements.",
+    question: "What types of lithium-ion batteries can be recycled by your facility?",
+    answer: (
+      <>
+        We accept various types of lithium-ion batteries for recycling, including those used in consumer electronics, electric vehicles, energy storage systems, and more.
+      </>
+    ),
   },
 ];
+
